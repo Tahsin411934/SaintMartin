@@ -27,7 +27,7 @@ export default function Page({ params }) {
   const [propertyPackages, setPropertyPackages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [contactNumber, setContactNumber] = useState([]);
-
+console.log(propertyFacilities);
   useEffect(() => {
     async function fetchData() {
       try {
