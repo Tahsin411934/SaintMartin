@@ -82,9 +82,9 @@ const AccordionBookMe = ({ facilities = { facilities: [] } }) => {
           if (panel && stickyTitle && isOpen) {
             const rect = panel.getBoundingClientRect();
             // Ensure it becomes sticky only when the content is in view
-            if (rect.top <= 124 && rect.bottom > 124) {
+            if (rect.top < 132 && rect.bottom > 132) {
               stickyTitle.style.position = "fixed";
-              stickyTitle.style.top = "124px";
+              stickyTitle.style.top = "132px";
               stickyTitle.style.width = "56%"; // Adjust to your requirement
               stickyTitle.style.backgroundColor = "white";
               stickyTitle.style.zIndex = "50";
@@ -136,7 +136,7 @@ const AccordionBookMe = ({ facilities = { facilities: [] } }) => {
           const lastAccordionBottom = lastAccordion.getBoundingClientRect().bottom;
 
           // Make the tab sticky when the first accordion reaches 124px
-          if (firstAccordionTop <= 124 && lastAccordionBottom > 124) {
+          if (firstAccordionTop < 132 && lastAccordionBottom > 132) {
             tabsRef.current.classList.add("sticky1");
           } else {
             tabsRef.current.classList.remove("sticky1");
